@@ -1,0 +1,29 @@
+<template name="postSubmit">
+  <form class="main form page">
+    <div class="form-group {{errorClass 'title'}}">
+      <label class="control-label" for="title">特型说明</label>
+      <div class="controls">
+          <input name="title" id="title" type="text" value="" placeholder="URL的特型" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+
+    <div class="form-group {{errorClass 'url'}}">
+      <label class="control-label" for="url">Qid</label>
+      <div class="controls">
+          <input name="url" id="url" type="text" value="" placeholder="Qid" class="form-control"/>
+          <span class="help-block">{{errorMessage 'url'}}</span>
+      </div>
+    </div>
+
+    <div class="form-group {{errorClass 'tips'}}">
+      <label class="control-label" for="tips">备注</label>
+      <div class="controls">
+          <textarea name="tips" id="tips" value="" placeholder="更多说明" class="form-control"></textarea>
+          <span class="help-block">{{errorMessage 'tips'}}</span>
+      </div>
+    </div>
+    
+    <input type="submit" value="Submit" class="btn btn-primary"/>
+  </form>
+</template>

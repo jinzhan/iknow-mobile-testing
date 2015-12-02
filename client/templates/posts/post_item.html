@@ -1,0 +1,17 @@
+<template name="postItem">
+  <div class="post">
+    <div class="post-content">
+      <h3><a target="_blank" href="{{host}}/question/{{url}}.html?samp_hit=715">{{title}}<span>{{url}}</span></a></h3>
+      <div class="samp-list">
+      	对照组：
+      	{{#each samples}}
+        	<a href="{{host}}/question/{{url}}.html?samp_hit={{id}}">{{id}}</a>
+      	{{/each}}
+      </div>
+      <p>
+        {{tips}}
+        <a class="pc-only" href="{{pathFor 'postEdit'}}">Edit</a>
+      </p>
+    </div>
+  </div>
+</template>
